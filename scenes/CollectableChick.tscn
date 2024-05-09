@@ -1,18 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://b34ehoq3ig2cq"]
 
-[ext_resource type="Script" path="res://scripts/chick.gd" id="1_d8nho"]
-[ext_resource type="Texture2D" uid="uid://ck853miqe8tn0" path="res://assets/sprites/poussin.png" id="2_sn7j1"]
+[ext_resource type="Script" path="res://scripts/collectableChick.gd" id="1_x2r2m"]
+[ext_resource type="Texture2D" uid="uid://ck853miqe8tn0" path="res://assets/sprites/poussin.png" id="2_1p17j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5tjvw"]
 radius = 2.0
 
 [node name="Area2D" type="Area2D"]
-script = ExtResource("1_d8nho")
+script = ExtResource("1_x2r2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
 scale = Vector2(0.008, 0.008)
-texture = ExtResource("2_sn7j1")
+texture = ExtResource("2_1p17j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5tjvw")
