@@ -1,15 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjfatv8fqc3hg"]
+[gd_scene load_steps=4 format=3 uid="uid://cjfatv8fqc3hg"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_iqaia"]
 [ext_resource type="Texture2D" uid="uid://wcffyue4g174" path="res://icon.svg" id="2_5u06k"]
-[ext_resource type="PackedScene" uid="uid://8mwcko1bpqn4" path="res://scenes/chick.tscn" id="2_8n4v0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skwde"]
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(5.04, 5.04)
 script = ExtResource("1_iqaia")
-Chick = ExtResource("2_8n4v0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.171875, 0.171875)
@@ -19,8 +17,4 @@ texture = ExtResource("2_5u06k")
 shape = SubResource("RectangleShape2D_skwde")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(11.1111, -0.198413)
-
-[node name="Sprite2D" type="Sprite2D" parent="Marker2D"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_5u06k")
+position = Vector2(0, -13.6905)
