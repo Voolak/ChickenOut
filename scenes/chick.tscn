@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://8mwcko1bpqn4"]
+[gd_scene load_steps=4 format=3 uid="uid://b34ehoq3ig2cq"]
 
 [ext_resource type="Script" path="res://scripts/chick.gd" id="1_d8nho"]
 [ext_resource type="Texture2D" uid="uid://ck853miqe8tn0" path="res://assets/sprites/poussin.png" id="2_sn7j1"]
