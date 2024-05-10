@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b34ehoq3ig2cq"]
+
+[ext_resource type="Script" path="res://scripts/projectileChick.gd" id="1_4h5i5"]
+[ext_resource type="Texture2D" uid="uid://ck853miqe8tn0" path="res://assets/sprites/poussin.png" id="2_t3ews"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5tjvw"]
+radius = 2.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_4h5i5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.008, 0.008)
+texture = ExtResource("2_t3ews")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5tjvw")

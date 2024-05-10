@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://bk0hn0ibyunlj"]
+
+[ext_resource type="PackedScene" uid="uid://dqcfx14mw35dj" path="res://scenes/Player.tscn" id="1_hobs2"]
+[ext_resource type="Script" path="res://scripts/CollectableChicks.gd" id="2_d5q6g"]
+[ext_resource type="PackedScene" uid="uid://bq7refgod45y2" path="res://scenes/CollectableChick.tscn" id="3_b6am0"]
+[ext_resource type="Script" path="res://scripts/Enemies.gd" id="4_b4ana"]
+[ext_resource type="Script" path="res://scripts/Walls.gd" id="5_omx26"]
+[ext_resource type="Script" path="res://scripts/Windows.gd" id="6_jgqtc"]
+[ext_resource type="Script" path="res://scripts/Doors.gd" id="7_ypo8g"]
+
+[sub_resource type="GDScript" id="GDScript_5itqq"]
+script/source = "extends Node
+
+func _ready():
+	for i in self.get_children():
+		i.add_to_group(\"player\")
+"
+
+[node name="LevelNode" type="Node"]
+
+[node name="GameManager" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="GameManager"]
+
+[node name="Players" type="Node" parent="."]
+script = SubResource("GDScript_5itqq")
+
+[node name="Player" parent="Players" instance=ExtResource("1_hobs2")]
+
+[node name="CollectableChicks" type="Node" parent="."]
+script = ExtResource("2_d5q6g")
+
+[node name="CollectableChick" parent="CollectableChicks" instance=ExtResource("3_b6am0")]
+position = Vector2(194, 55)
+
+[node name="CollectableChick2" parent="CollectableChicks" instance=ExtResource("3_b6am0")]
+position = Vector2(118, -91)
+
+[node name="CollectableChick3" parent="CollectableChicks" instance=ExtResource("3_b6am0")]
+position = Vector2(-16, 134)
+
+[node name="Enemies" type="Node" parent="." groups=["enemy"]]
+script = ExtResource("4_b4ana")
+
+[node name="Walls" type="Node" parent="." groups=["wall"]]
+script = ExtResource("5_omx26")
+
+[node name="Windows" type="Node" parent="." groups=["window"]]
+script = ExtResource("6_jgqtc")
+
+[node name="Doors" type="Node" parent="." groups=["door"]]
+script = ExtResource("7_ypo8g")

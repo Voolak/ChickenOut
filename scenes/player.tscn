@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_iqaia"]
 [ext_resource type="Texture2D" uid="uid://wcffyue4g174" path="res://icon.svg" id="2_5u06k"]
-[ext_resource type="PackedScene" uid="uid://b34ehoq3ig2cq" path="res://scenes/CollectableChick.tscn" id="2_8n4v0"]
+[ext_resource type="PackedScene" uid="uid://b34ehoq3ig2cq" path="res://scenes/ProjectileChick.tscn" id="2_c6nit"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skwde"]
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(5.04, 5.04)
 script = ExtResource("1_iqaia")
-Chick = ExtResource("2_8n4v0")
+Chick = ExtResource("2_c6nit")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.171875, 0.171875)

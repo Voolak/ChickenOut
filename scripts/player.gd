@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var Chick : PackedScene
 
 var speed = 400  # speed in pixels/sec
+var ammo = 0
 
 func _physics_process(delta):
 	look_at(get_global_mouse_position())
@@ -16,6 +17,11 @@ func _physics_process(delta):
 	move_and_slide()
 
 func shoot():
-	var b = Chick.instantiate()
-	owner.add_child(b)
-	b.transform = $Marker2D.global_transform
+	if ammo > 0:
+		var b = Chick.instantiate()
+		owner.add_child(b)
+		b.transform = $Marker2D.global_transform
+		ammo -= 1
+	
+func pickAmmo():
+	ammo += 1
