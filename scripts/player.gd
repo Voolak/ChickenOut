@@ -25,3 +25,4 @@ func shoot():
 	
 func pickAmmo():
 	ammo += 1
+	print("ammo : " + str(ammo))
